@@ -469,11 +469,26 @@ const ProductListing = () => {
                   <div key={product.id} className="group flex flex-col items-center">
                     <Link to={`/producto/${product.id}`} className="w-full flex flex-col items-center">
                       <div className="w-full aspect-[4/3] bg-fontenla-gray flex items-center justify-center mb-6 overflow-hidden relative">
-                        <img 
-                          src={product.image} 
-                          alt={product.name} 
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                        />
+                        {product.images && product.images.length > 1 ? (
+                          <>
+                            <img 
+                              src={product.image} 
+                              alt={product.name} 
+                              className="w-full h-full object-cover transition-all duration-700 group-hover:opacity-0 absolute inset-0"
+                            />
+                            <img 
+                              src={product.images[1]} 
+                              alt={`${product.name} hover`} 
+                              className="w-full h-full object-cover transition-all duration-700 opacity-0 group-hover:opacity-100 group-hover:scale-105 absolute inset-0"
+                            />
+                          </>
+                        ) : (
+                          <img 
+                            src={product.image} 
+                            alt={product.name} 
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out absolute inset-0"
+                          />
+                        )}
                         {/* Hover Buttons */}
                         <div className="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex flex-col">
                           <button 

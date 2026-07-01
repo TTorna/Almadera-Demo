@@ -32,12 +32,12 @@ const CategoryCarousel = () => {
               </div>
               
               {/* Image Container */}
-              <div className="flex-1 flex items-center justify-center p-4 w-full">
-                <div className="relative w-48 h-48 md:w-56 md:h-56">
+              <div className="flex-1 flex items-center justify-center p-2 w-full">
+                <div className="relative w-64 h-64 md:w-80 md:h-80">
                   <img 
                     src={cat.image} 
                     alt={cat.title} 
-                    className="absolute inset-0 w-full h-full object-cover mix-blend-multiply transition-transform duration-700 ease-out group-hover:scale-110"
+                    className="absolute inset-0 w-full h-full object-contain mix-blend-multiply transition-transform duration-700 ease-out group-hover:scale-110"
                   />
                 </div>
               </div>

@@ -71,11 +71,26 @@ const ProductCarousel = ({ title, products, bgColor = 'bg-white', paddingClass =
                       </div>
                     )}
                     
-                    <img 
-                      src={product.image} 
-                      alt={product.name} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                    {product.images && product.images.length > 1 ? (
+                      <>
+                        <img 
+                          src={product.image} 
+                          alt={product.name} 
+                          className="w-full h-full object-cover transition-all duration-700 group-hover:opacity-0 absolute inset-0"
+                        />
+                        <img 
+                          src={product.images[1]} 
+                          alt={`${product.name} hover`} 
+                          className="w-full h-full object-cover transition-all duration-700 opacity-0 group-hover:opacity-100 group-hover:scale-105 absolute inset-0"
+                        />
+                      </>
+                    ) : (
+                      <img 
+                        src={product.image} 
+                        alt={product.name} 
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 absolute inset-0"
+                      />
+                    )}
                     
                     {/* Hover Buttons */}
                     <div className="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex flex-col">

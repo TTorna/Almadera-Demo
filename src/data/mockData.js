@@ -52,17 +52,17 @@ export const featuredCategories = [
   {
     id: 'sillas',
     title: 'SILLAS',
-    image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=800&h=800&q=80'
+    image: '/images/silla_blanco.png'
   },
   {
     id: 'mesas',
     title: 'MESAS',
-    image: 'https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=800&h=800&q=80'
+    image: '/images/mesa_blanco.png'
   },
   {
     id: 'muebles',
     title: 'MUEBLES',
-    image: 'https://images.unsplash.com/photo-1594620302200-9a762244a156?auto=format&fit=crop&w=800&h=800&q=80'
+    image: '/images/mueble_blanco.png'
   }
 ];
 
