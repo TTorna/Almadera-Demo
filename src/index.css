@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    color: #333333;
+    background-color: #ffffff;
+    @apply font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .container-custom {
+    @apply max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Fontenla specific buttons */
+  .btn-primary-ecommerce {
+    background-color: #111111;
+    color: #ffffff;
+    @apply inline-block px-8 py-3 text-xs uppercase tracking-widest font-medium hover:bg-black transition-colors duration-300 text-center;
+  }
+
+  .btn-outline-ecommerce {
+    background-color: transparent;
+    border: 1px solid #111111;
+    color: #111111;
+    @apply inline-block px-8 py-3 text-xs uppercase tracking-widest font-medium hover:bg-black hover:text-white transition-colors duration-300 text-center;
+  }
+}
